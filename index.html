@@ -1,56 +1,477 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/zyx-nova/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZYX Nova | Карьерный апгрейд нового поколения</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+
     <script type="module" crossorigin src="/zyx-nova/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/zyx-nova/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/zyx-nova/assets/styles-DRKMTVb7.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
+  <div class="container header__container">
+      <a href="/" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">ZYX<span class="accent">-NOVA</span></span>
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+
+      <nav class="nav">
+          <ul class="nav__list">
+              <li><a href="#hero" class="nav__link">Главная</a></li>
+              <li><a href="#services" class="nav__link">Услуги</a></li>
+              <li><a href="#method" class="nav__link">Методология</a></li>
+              <li><a href="#blog" class="nav__link">Блог</a></li>
+              <li><a href="#reviews" class="nav__link">Отзывы</a></li>
+          </ul>
+      </nav>
+
+      <a href="#contact" class="btn btn--primary header__btn">Начать сейчас</a>
+
+      <button class="burger" aria-label="Menu">
+          <span></span>
+      </button>
   </div>
 </header>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu__content">
+      <ul class="mobile-menu__list">
+          <li><a href="#hero" class="mobile-menu__link">Главная</a></li>
+          <li><a href="#services" class="mobile-menu__link">Услуги</a></li>
+          <li><a href="#method" class="mobile-menu__link">Методология</a></li>
+          <li><a href="#blog" class="mobile-menu__link">Блог</a></li>
+          <li><a href="#contact" class="mobile-menu__link">Контакты</a></li>
+      </ul>
+      <a href="#contact" class="btn btn--primary mobile-menu__btn">Начать сейчас</a>
+  </div>
+</div>
 
-
-    <main>
+    <main id="main-scroll-container">
       <!-- Loads the specified .html file -->
-      
+      <section id="hero" class="hero">
+  <div id="hero-background" class="hero__background"></div>
+
+  <div class="container hero__container">
+      <div class="hero__content" data-scroll data-scroll-speed="1">
+          <h1 class="hero__title">
+              Технология <span class="text-gradient">нового поколения</span><br>
+              для вашего карьерного роста
+          </h1>
+          <p class="hero__description">
+              Переосмыслите подход к развитию. Инновационная платформа ZYX Nova открывает доступ к возможностям, которые меняют правила игры в странах ЕС.
+          </p>
+          <div class="hero__actions">
+              <a href="#contact" class="btn btn--primary">Начать сейчас</a>
+              <a href="#services" class="btn btn--secondary">Узнать детали</a>
+          </div>
+
+          <div class="hero__stats">
+              <div class="stat-item">
+                  <span class="stat-number">94%</span>
+                  <span class="stat-label">Успешных кейсов</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                  <span class="stat-number">24/7</span>
+                  <span class="stat-label">Экспертная поддержка</span>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="hero__scroll-down">
+      <span>Скрольте вниз</span>
+      <i data-lucide="chevron-down"></i>
+  </div>
+</section>
+<section id="services" class="about" data-scroll-section>
+  <div class="container about__container">
+      <div class="about__grid">
+          <div class="about__content">
+              <span class="about__subtitle">О платформе</span>
+              <h2 class="about__title">Решения, которые <span class="text-accent">меняют правила игры</span></h2>
+              <p class="about__text">
+                  ZYX Nova — это не просто блог, а <strong>передовая цифровая инфраструктура</strong> для тех, кто готов к качественному скачку. Мы объединили AI-инструменты для реальных задач и методологии, доказавшие эффективность в условиях европейского рынка.
+              </p>
+              <ul class="about__features">
+                  <li class="about__feature-item">
+                      <i data-lucide="zap"></i>
+                      <span>Быстрый и лёгкий старт в новой нише</span>
+                  </li>
+                  <li class="about__feature-item">
+                      <i data-lucide="shield-check"></i>
+                      <span>Экспертная поддержка на всех этапах</span>
+                  </li>
+                  <li class="about__feature-item">
+                      <i data-lucide="trending-up"></i>
+                      <span>Стратегия роста на базе инноваций</span>
+                  </li>
+              </ul>
+          </div>
+
+          <div class="about__visual">
+              <div class="glass-card" data-scroll data-scroll-speed="2">
+                  <div class="glass-card__header">
+                      <div class="dot red"></div>
+                      <div class="dot yellow"></div>
+                      <div class="dot green"></div>
+                  </div>
+                  <div class="glass-card__body">
+                      <div class="code-line"><span>platform</span>.init(<span class="code-val">"career_upgrade"</span>);</div>
+                      <div class="code-line"><span>status</span>: <span class="code-val">"ready_for_launch"</span>;</div>
+                      <div class="code-line"><span>location</span>: <span class="code-val">"European Union"</span>;</div>
+                      <div class="code-line"><span>ai_tools</span>: <span class="code-val">active</span>;</div>
+                  </div>
+                  <div class="glass-card__footer">
+                      <div class="pulse-button">Система активна</div>
+                  </div>
+              </div>
+              <div class="about__glow"></div>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="advantages" class="benefits" data-scroll-section>
+  <div class="container">
+      <div class="benefits__header">
+          <span class="benefits__subtitle">Почему выбирают нас</span>
+          <h2 class="benefits__title">Ваш путь к <span class="text-gradient">новым горизонтам</span></h2>
+      </div>
+
+      <div class="benefits__grid">
+          <div class="benefit-card" data-scroll data-scroll-speed="1">
+              <div class="benefit-card__icon">
+                  <i data-lucide="cpu"></i>
+              </div>
+              <h3 class="benefit-card__title">AI-инструменты для задач</h3>
+              <p class="benefit-card__text">Используйте мощь искусственного интеллекта для автоматизации рутины и анализа рынка труда в реальном времени.</p>
+              <div class="benefit-card__badge">Инновация</div>
+          </div>
+
+          <div class="benefit-card" data-scroll data-scroll-speed="1.2">
+              <div class="benefit-card__icon">
+                  <i data-lucide="line-chart"></i>
+              </div>
+              <h3 class="benefit-card__title">Стратегия роста 2026</h3>
+              <p class="benefit-card__text">Пошаговый путь, понятный каждому: от оценки перспектив до реализации масштабного проекта.</p>
+              <div class="benefit-card__badge">Практика</div>
+          </div>
+
+          <div class="benefit-card" data-scroll data-scroll-speed="1.1">
+              <div class="benefit-card__icon">
+                  <i data-lucide="euro"></i>
+              </div>
+              <h3 class="benefit-card__title">Пассивный доход</h3>
+              <p class="benefit-card__text">Проверенные методики создания дополнительных источников дохода, применимые уже сегодня в странах ЕС.</p>
+              <div class="benefit-card__badge">Выгода</div>
+          </div>
+
+          <div class="benefit-card" data-scroll data-scroll-speed="1.3">
+              <div class="benefit-card__icon">
+                  <i data-lucide="globe"></i>
+              </div>
+              <h3 class="benefit-card__title">Локация: Германия</h3>
+              <p class="benefit-card__text">Специфические решения и поддержка для тех, кто строит карьеру в немецкоязычной бизнес-среде.</p>
+              <div class="benefit-card__badge">EU Доступ</div>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="innovations" class="innovations" data-scroll-section>
+  <div class="container">
+      <div class="innovations__wrapper">
+          <div class="innovations__info" data-scroll data-scroll-speed="0.5">
+              <span class="badge badge--neon">Платформа года 2026</span>
+              <h2 class="innovations__title">Технологии, которые <br><span class="text-neon">работают на вас</span></h2>
+              <p class="innovations__description">
+                  Мы интегрировали <strong>передовую цифровую инфраструктуру</strong> в процесс карьерного консалтинга. Это решения, которые меняют правила игры.
+              </p>
+
+              <div class="innovations__features">
+                  <div class="innov-item">
+                      <div class="innov-item__num">01</div>
+                      <div class="innov-item__text">
+                          <h4>Нейро-подбор ниш</h4>
+                          <p>Алгоритмы анализируют 1000+ факторов рынка Германии.</p>
+                      </div>
+                  </div>
+                  <div class="innov-item">
+                      <div class="innov-item__num">02</div>
+                      <div class="innov-item__text">
+                          <h4>Smart-нетворкинг</h4>
+                          <p>Автоматизация выхода на лиц, принимающих решения (LPR).</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="innovations__visual">
+              <div class="core-node">
+                  <div class="core-node__circle core-node__circle--1"></div>
+                  <div class="core-node__circle core-node__circle--2"></div>
+                  <div class="core-node__circle core-node__circle--3"></div>
+                  <div class="core-node__main">
+                      <i data-lucide="cpu"></i>
+                  </div>
+
+                  <div class="floating-orbit orbit-1">
+                      <div class="orbit-icon"><i data-lucide="brain-circuit"></i></div>
+                  </div>
+                  <div class="floating-orbit orbit-2">
+                      <div class="orbit-icon"><i data-lucide="database"></i></div>
+                  </div>
+                  <div class="floating-orbit orbit-3">
+                      <div class="orbit-icon"><i data-lucide="share-2"></i></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="method" class="method" data-scroll-section>
+  <div class="container">
+      <div class="section-header">
+          <span class="badge">Как это работает</span>
+          <h2 class="section-title">Методологии, <span class="text-indigo">доказавшие эффективность</span></h2>
+          <p class="section-desc">Пошаговый путь, понятный каждому — от первой консультации до оффера мечты.</p>
+      </div>
+
+      <div class="method__steps">
+          <div class="method-step" data-scroll data-scroll-speed="0.5">
+              <div class="method-step__num">01</div>
+              <h3 class="method-step__title">Анализ перспектив</h3>
+              <p>Оценить перспективы проекта и вашего личного бренда на рынке ЕС с помощью AI-инструментов.</p>
+          </div>
+          <div class="method-step" data-scroll data-scroll-speed="0.8">
+              <div class="method-step__num">02</div>
+              <h3 class="method-step__title">Стратегия роста</h3>
+              <p>Разработка индивидуального плана: практики, применимые уже сегодня для быстрого старта.</p>
+          </div>
+          <div class="method-step" data-scroll data-scroll-speed="0.6">
+              <div class="method-step__num">03</div>
+              <h3 class="method-step__title">Реальный апгрейд</h3>
+              <p>Сопровождение и экспертная поддержка на всех этапах внедрения новой карьерной модели.</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section id="blog" class="blog" data-scroll-section>
+  <div class="container">
+      <div class="blog__top">
+          <h2 class="section-title">Инсайты и <span class="text-mint">инновации</span></h2>
+          <a href="#" class="btn btn--secondary">Смотреть всё</a>
+      </div>
+
+      <div class="blog__grid">
+          <article class="blog-card">
+              <div class="blog-card__image">
+                  <img src="img/placeholder.png" alt="AI в карьере">
+                  <span class="blog-card__tag">Технологии</span>
+              </div>
+              <div class="blog-card__body">
+                  <h3 class="blog-card__title">AI-инструменты для реальных задач в 2026 году</h3>
+                  <p>Как автоматизировать поиск вакансий в Германии и выделиться среди тысяч кандидатов.</p>
+                  <a href="#" class="blog-card__link">Узнать детали <i data-lucide="arrow-right"></i></a>
+              </div>
+          </article>
+
+          <article class="blog-card">
+              <div class="blog-card__image">
+                  <img src="img/placeholder.png" alt="Доход в ЕС">
+                  <span class="blog-card__tag">Выгода</span>
+              </div>
+              <div class="blog-card__body">
+                  <h3 class="blog-card__title">Программа пассивного дохода для специалистов</h3>
+                  <p>Создание дополнительных источников прибыли на базе ваших профессиональных навыков.</p>
+                  <a href="#" class="blog-card__link">Узнать детали <i data-lucide="arrow-right"></i></a>
+              </div>
+          </article>
+
+          <article class="blog-card">
+              <div class="blog-card__image">
+                  <img src="img/placeholder.png" alt="Карьера в Европе">
+                  <span class="blog-card__tag">Рынок</span>
+              </div>
+              <div class="blog-card__body">
+                  <h3 class="blog-card__title">Платформа уже доступна в Европе: что изменилось?</h3>
+                  <p>Обзор новых правил найма и карьерных лифтов в ключевых бизнес-хабах ЕС.</p>
+                  <a href="#" class="blog-card__link">Узнать детали <i data-lucide="arrow-right"></i></a>
+              </div>
+          </article>
+      </div>
+  </div>
+</section>
+
+<section id="reviews" class="reviews" data-scroll-section>
+  <div class="container">
+      <div class="section-header">
+          <h2 class="section-title">Те, кто уже <span class="text-indigo">изменил правила игры</span></h2>
+      </div>
+
+      <div class="reviews__grid">
+          <div class="review-card">
+              <div class="review-card__header">
+                  <div class="review-card__user">
+                      <div class="avatar"></div>
+                      <div>
+                          <h4>Маркус Шмидт</h4>
+                          <span>Senior Developer, Munich</span>
+                      </div>
+                  </div>
+                  <div class="rating">★★★★★</div>
+              </div>
+              <p class="review-card__text">"ZYX Nova — это проверенный партнер. Благодаря AI-подходам я переосмыслил свой путь и получил оффер, о котором мечтал."</p>
+          </div>
+
+          <div class="review-card">
+              <div class="review-card__header">
+                  <div class="review-card__user">
+                      <div class="avatar"></div>
+                      <div>
+                          <h4>Анна Иванова</h4>
+                          <span>Project Manager, Berlin</span>
+                      </div>
+                  </div>
+                  <div class="rating">★★★★★</div>
+              </div>
+              <p class="review-card__text">"Удобная адаптация без сложностей. Технологии нового поколения действительно работают, когда за ними стоит такая поддержка."</p>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="contact" class="contact" data-scroll-section>
+  <div class="container contact__container">
+      <div class="contact__grid">
+          <div class="contact__info" data-scroll data-scroll-speed="1">
+              <span class="badge">Свяжитесь с нами</span>
+              <h2 class="section-title">Готовы к <span class="text-mint">апгрейду?</span></h2>
+              <p class="contact__text">
+                  Бесплатная консультация по всем вопросам развития карьеры в странах ЕС. Оставьте заявку, и наш эксперт свяжется с вами в течение 24 часов.
+              </p>
+
+              <div class="contact__details">
+                  <div class="detail-item">
+                      <div class="detail-item__icon"><i data-lucide="check-circle"></i></div>
+                      <p>Экспертная поддержка на всех этапах</p>
+                  </div>
+                  <div class="detail-item">
+                      <div class="detail-item__icon"><i data-lucide="check-circle"></i></div>
+                      <p>Методологии, доказавшие эффективность</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="contact__form-wrapper">
+              <form id="careerForm" class="contact-form">
+                  <div class="form-group">
+                      <label for="userName">Ваше имя</label>
+                      <input type="text" id="userName" name="name" placeholder="Александр" required>
+                  </div>
+
+                  <div class="form-row">
+                      <div class="form-group">
+                          <label for="userEmail">Email</label>
+                          <input type="email" id="userEmail" name="email" placeholder="mail@example.com" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="userPhone">Телефон</label>
+                          <input type="tel" id="userPhone" name="phone" placeholder="49301234567" required>
+                          <small>Только цифры (код страны + номер)</small>
+                      </div>
+                  </div>
+
+                  <div class="form-group captcha-group">
+                      <label for="captchaInput">Решите пример: <span id="captchaQuestion"></span></label>
+                      <input type="text" id="captchaInput" placeholder="Ответ" required>
+                  </div>
+
+                  <div class="form-checkbox">
+                      <input type="checkbox" id="policy" required>
+                      <label for="policy">Я согласен с <a href="./personal-data-policy.html">политикой конфиденциальности</a></label>
+                  </div>
+
+                  <button type="submit" class="btn btn--primary btn--full">Запросить доступ</button>
+
+                  <div id="formSuccess" class="form-message success-message" style="display: none;">
+                      <i data-lucide="party-popper"></i>
+                      <p>Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.</p>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+  <div class="container footer__grid">
+      <div class="footer__col">
+          <a href="/" class="logo footer__logo">
+              <span class="logo__text">ZYX<span class="accent">-NOVA</span></span>
+          </a>
+          <p class="footer__description">
+              Инновационная платформа для трансформации вашей карьеры в странах ЕС и за их пределами.
+          </p>
+          <div class="footer__contacts">
+              <a href="tel:+493020459310" class="footer__contact-link">
+                  <i data-lucide="phone"></i> +49 30 2045 9310
+              </a>
+              <a href="mailto:hello@zyx-nova.blog" class="footer__contact-link">
+                  <i data-lucide="mail"></i> hello@zyx-nova.blog
+              </a>
+              <address class="footer__address">
+                  <i data-lucide="map-pin"></i> Friedrichstraße 101, 10117 Berlin, Germany
+              </address>
+          </div>
+      </div>
+
+      <div class="footer__col">
+          <h4 class="footer__title">Навигация</h4>
+          <ul class="footer__menu">
+              <li><a href="#hero">Главная</a></li>
+              <li><a href="#services">Услуги</a></li>
+              <li><a href="#method">Методология</a></li>
+              <li><a href="#blog">Блог</a></li>
+          </ul>
+      </div>
+
+      <div class="footer__col">
+          <h4 class="footer__title">Юридическая информация</h4>
+          <ul class="footer__menu">
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="cookies.html">Cookie Policy</a></li>
+              <li><a href="terms.html">Terms of Use</a></li>
+              <li><a href="return.html">Return Policy</a></li>
+              <li><a href="disclaimer.html">Disclaimer</a></li>
+              <li><a href="personal-data-policy.html">Personal Data</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="container footer__bottom">
+      <p>&copy; 2026 ZYX Nova. Все права защищены. Предложение активно только в странах ЕС.</p>
   </div>
 </footer>
-
-
+    <div id="cookiePopup" class="cookie-popup">
+      <div class="cookie-popup__content">
+          <div class="cookie-popup__icon"><i data-lucide="cookie"></i></div>
+          <p class="cookie-popup__text">
+              Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.html">Cookie политике</a>.
+          </p>
+          <button id="acceptCookies" class="btn btn--primary btn--sm">Принять</button>
+      </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   </body>
 </html>
